@@ -1,0 +1,145 @@
+// https://coderwall.com/p/oztebw/less-mixin-for-retina-ready-sprites
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+// html {
+// }
+
+body {
+	font-family: @fontPrimary;
+	font-size: 14px;
+	color: @colorBlack;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	background: radial-gradient(circle at center, rgb(165,165,165) 0%, rgb(100,100,100) 100%);
+	// width: 100vw;
+	// height: 100vh;
+	// display: flex;
+	// align-items: center;
+	// justify-content: center;
+	// flex-direction: column;
+
+}
+
+// a {
+// 	.transition-out();
+// 	&:hover {
+// 		.transition-in();
+// 	}
+// }
+
+svg {
+	// display: block;
+	fill-rule: evenodd;
+	outline: none;
+	// &:not(:root) {
+	// 	overflow: hidden;
+	// }
+}
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+
+
+.button {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: 0;
+	display: inline-block;
+	background: transparent;
+	cursor: pointer;
+	font-family: @fontPrimary;
+	font-size: 14px;
+	color: @colorBlack;
+	.uppercase();
+}
+
+
+
+
+
+
+
+
+
+
+// .button {
+// 	outline: none;
+// 	display: inline-block;
+// 	padding: 0;
+// 	margin: 0;
+// 	text-transform: uppercase;
+// 	border: 0;
+// 	background: transparent;
+// 	cursor: pointer;
+// 	.transition-out();
+// 	&:hover {
+// 		.transition-in();
+// 	}
+// 	&_small {
+// 		font-size: 10px;
+// 	}
+// 	&_link {
+// 		background: transparent;
+// 		border: 0;
+// 	}
+// 	&_white {
+// 		color: @colorWhite;
+// 		&:hover {
+// 			color: fade(@colorWhite, 50%);
+// 		}
+// 	}
+// 	&_icon {
+// 		&-white {
+// 			svg {
+// 				fill: fade(@colorWhite, 50%);
+// 				.transition-out();
+// 			}
+// 			&:hover {
+// 				svg {
+// 					fill: @colorWhite;
+// 					.transition-in();
+// 				}
+// 			}
+// 		}
+// 		&-close {
+// 			svg {
+// 				width: 12px;
+// 				height: 12px;
+// 			}
+// 		}
+// 	}
+// }
+
+
+.is-hidden {
+	display: none !important;
+}
+
+.is-visible {
+	display: block !important;
+}
+
+
+
+.author {
+	color: rgb(255,255,255);
+	text-align: center;
+	width: 320px;
+	margin: 30px auto;
+	a {
+		text-decoration: underline;
+		color: rgb(255,255,255);
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

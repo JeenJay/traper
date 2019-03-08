@@ -1,0 +1,44 @@
+body {
+	position: relative;
+}
+
+#preloader {
+	background: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 500;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+}
+
+#preloader.animate {
+	-webkit-animation-name: fadeOut;
+	animation-name: fadeOut;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-timing-function: ease;
+	animation-timing-function: ease;
+}
+
+	@-webkit-keyframes fadeOut {
+		0% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+
+	@keyframes fadeOut {
+		0% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
+	}

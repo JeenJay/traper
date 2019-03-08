@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet">
+
+	<symbol id="hamburger" width="20" height="14" viewBox="0 0 20 14">
+		<g>
+			<rect id="topLine" x="0" y="0" width="20" height="2"></rect>
+			<rect id="middleLine" x="9" y="6" width="11" height="2"></rect>
+			<rect id="bottomLine" x="4" y="12" width="16" height="2"></rect>
+		</g>
+	</symbol>
+
+	<symbol id="close" width="12" height="12" viewBox="0 0 12 12">
+		<path d="M 1.4121094,0 0,1.4121094 4.5898438,6.0019531 0,10.587891 1.4121094,12 6,7.4121094 10.587891,12 12,10.587891 7.4121094,6.0019531 12,1.4121094 10.587891,0 6,4.5898438 1.4121094,0 Z"></path>
+	</symbol>
+
+</svg>

@@ -1,0 +1,14 @@
+{
+	"name": "traper",
+	"version": "1.0.0",
+	"author": "Dmitry Maximov",
+	"license": "ISC",
+	"homepage": "http://www.jeenjay.ru",
+	"dependencies": {
+		"jquery": "1.12.4",
+		"normalize.css": "^8.0.0",
+		"object-fit-images": "^3.2.4",
+		"slick-carousel": "1.8.1",
+		"svg4everybody": "^2.1.9"
+	}
+}

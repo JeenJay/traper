@@ -1,0 +1,49 @@
+.transition-out() {
+	transition: all 0.25s ease-out 0s;
+}
+
+.transition-in() {
+	transition: all 0.25s ease-in 0s;
+}
+
+.transition() {
+	transition: all 0.25s ease-in-out 0s;
+}
+
+.border-radius() {
+	border-radius: 3px;
+}
+
+.reset-indents() {
+	margin: 0;
+	padding: 0;
+}
+
+.reset-list() {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.headings(@style) {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@style();
+	}
+}
+
+.uppercase() {
+	text-transform: uppercase;
+}
+
+.object-fit(@fit: fill, @position) {
+	-o-object-fit: @fit;
+	object-fit: @fit;
+	-o-object-position: @position;
+	object-position: @position;
+	font-family: "object-fit: @{fit}; object-position: @{position}";
+}

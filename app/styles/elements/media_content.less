@@ -1,0 +1,218 @@
+.media {
+	&__content {
+		position: absolute;
+		z-index: 20;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 0;
+		background: @colorBlack;
+		overflow: hidden;
+		@keyframes showMediaContent {
+			to {
+				width: 620px;
+			}
+		}
+		animation-name: showMediaContent;
+		animation-duration: 0.6s;
+		animation-delay: 0s;
+		animation-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+		animation-iteration-count: 1;
+		animation-direction: normal;
+		animation-fill-mode: forwards;
+		&.is-hiding {
+			width: 620px;
+			@keyframes hideMediaContent {
+				to {
+					width: 0;
+				}
+			}
+			animation-name: hideMediaContent;
+			animation-duration: 0.4s;
+			animation-delay: 0s;
+			animation-timing-function: linear;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+			.video progress {
+				width: 250px;
+				@keyframes hideProgress {
+					to {
+						width: 0;
+					}
+				}
+				animation-name: hideProgress;
+				animation-duration: 0.4s;
+				animation-delay: 0.8s;
+				animation-iteration-count: 1;
+				animation-fill-mode: forwards;
+				animation-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+			}
+		}
+		// &.is-hidden {
+
+		// }
+		#closeMediaContent {
+			position: absolute;
+			z-index: 20;
+			top: 50px;
+			right: 50px;
+			opacity: 0;
+			svg {
+				fill: fade(@colorWhite, 50%);
+				.transition-out();
+				width: 12px;
+				height: 12px;
+			}
+			&:hover {
+				svg {
+					fill: @colorWhite;
+					.transition-in();
+				}
+			}
+			@keyframes closeButtonShow {
+				to {
+					opacity: 1;
+				}
+			}
+			animation-name: closeButtonShow;
+			animation-duration: 0.4s;
+			animation-delay: 0.7s;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+		}
+	}
+}
+
+
+.video {
+	width: 280px;
+	position: absolute;
+	z-index: 10;
+	top: 50%;
+	left: 170px;
+	transform: translateY(-50%);
+	&__media {
+		margin-bottom: 30px;
+		height: 480px;
+		width: 280px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		.border-radius();
+		position: relative;
+		&::after {
+			position: absolute;
+			z-index: 20;
+			top: 0;
+			// left: 0;
+			width: 100%;
+			right: 0;
+			bottom: 0;
+			background: @colorBlack;
+			content: "";
+			@keyframes showVideo {
+				to {
+					width: 0;
+				}
+			}
+			animation-name: showVideo;
+			animation-duration: 0.4s;
+			animation-delay: 0.6s;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+			animation-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+		}
+		video {
+			display: block;
+
+
+			width: 100%;
+			height: auto;
+			min-height: 480px;
+			background: fade(@colorWhite, 10%);
+			// position: relative;
+		}
+		progress {
+			display: block;
+			background: fade(@colorWhite, 25%);
+			.border-radius();
+			height: 3px;
+			overflow: hidden;
+			// width: 250px;
+			width: 0;
+			position: absolute;
+			z-index: 10;
+			top: 15px;
+			left: 15px;
+			transition: all 0.2s linear 0s;
+			@keyframes showProgress {
+				to {
+					width: 250px;
+				}
+			}
+			animation-name: showProgress;
+			animation-duration: 0.4s;
+			animation-delay: 0.8s;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+			animation-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+			&::-webkit-progress-bar {
+				background: fade(@colorWhite, 25%);
+				.border-radius();
+			}
+			&::-webkit-progress-value {
+				.border-radius();
+				background: @colorWhite;
+				transition: all 0.2s linear 0s;
+			}
+			&::-moz-progress-bar {
+				.border-radius();
+				background: @colorWhite;
+				transition: all 0.2s linear 0s;
+			}
+		}
+	}
+
+	// &_landscape {
+	// 	height: 100%;
+	// 	width: auto;
+	// }
+
+	// &_portrait {
+	// 	width: 100%;
+	// 	height: auto;
+	// }
+
+	&__headline {
+		user-select: none;
+		transform: translateY(50%);
+		opacity: 0;
+		@keyframes showHeadline {
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+		animation-name: showHeadline;
+		animation-duration: 0.6s;
+		animation-delay: 1s;
+		animation-iteration-count: 1;
+		animation-direction: normal;
+		animation-fill-mode: forwards;
+		animation-timing-function: linear;
+		strong {
+			display: block;
+			margin-bottom: 5px;
+			font-size: 16px;
+		}
+		em {
+			display: block;
+			color: fade(@colorWhite, 50%);
+			font-style: normal;
+		}
+	}
+}
+
+
+

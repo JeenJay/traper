@@ -1,0 +1,37 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	// background: red;
+	padding: 46px 60px 46px 40px;
+	// height: 128px;
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 600px;
+	&__logo {
+
+	}
+	&__navigation {
+
+	}
+	nav ul {
+		display: none;
+	}
+}
+
+.logo {
+	margin: 0;
+	font-size: 28px;
+	line-height: 1;
+	a {
+		text-decoration: none;
+		color: @colorBlack;
+		.transition-out();
+		&:hover {
+			color: fade(@colorBlack, 50%);
+			.transition-in();
+		}
+	}
+}
